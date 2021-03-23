@@ -1,11 +1,11 @@
 import React from "react";
-import "./NavigationBar.css";
+import "./NavigationBar.scss";
 import { AppBar, Toolbar, IconButton, Button } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
 
 const NavigationBar = (): JSX.Element => (
     <div>
-        <AppBar position="static" style={{ backgroundColor: "#8c6e5d" }}>
+        <AppBar position="static" style={{ backgroundColor: "#101726" }}>
             <Toolbar>
                 <IconButton edge="start" color="inherit" aria-label="menu">
                     <MenuIcon />

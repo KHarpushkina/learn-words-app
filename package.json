@@ -12,6 +12,13 @@
     "@types/node": "^12.20.6",
     "@types/react": "^17.0.3",
     "@types/react-dom": "^17.0.2",
+    "bcrypt": "^5.0.1",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongodb": "^3.6.5",
+    "mongoose": "^5.12.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-scripts": "4.0.3",
@@ -22,6 +29,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "run": "babel src/server -d dist && nodemon dist/server.js",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -43,6 +51,10 @@
     ]
   },
   "devDependencies": {
+    "@babel/cli": "^7.13.10",
+    "@babel/core": "^7.13.10",
+    "@babel/plugin-transform-async-to-generator": "^7.13.0",
+    "@babel/preset-env": "^7.13.10",
     "@types/node-sass": "^4.11.1",
     "@typescript-eslint/eslint-plugin": "^4.18.0",
     "@typescript-eslint/parser": "^4.18.0",
@@ -51,6 +63,7 @@
     "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-react": "^7.22.0",
     "node-sass": "^5.0.0",
+    "nodemon": "^2.0.7",
     "prettier": "^2.2.1",
     "sass-loader": "^11.0.1"
   }

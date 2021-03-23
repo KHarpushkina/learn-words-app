@@ -1,30 +1,37 @@
 import React, { Component } from "react";
 import { Grid } from "@material-ui/core";
 
+import WordCard from "../../components/WordCard/WordCard";
+
 type ManageWordsSetProps = {
     message: string;
 };
 
 type ManageWordsSetState = {
-    count: number;
-};
-
-const words = {
-    book: "книга",
-    pen: "ручка",
+    words: Array<any>;
 };
 
 class ManageWordsSet extends Component<ManageWordsSetProps, ManageWordsSetState> {
     state: ManageWordsSetState = {
-        count: 0,
+        words: [
+            {
+                spelling: "book",
+                translation: "книга",
+            },
+            {
+                spelling: "pen",
+                translation: "ручка",
+            },
+        ],
     };
+
     render() {
         return (
             <div>
-                <Grid container spacing={1}>
-                    <Grid container item xs={12} spacing={3}></Grid>
-                    <Grid container item xs={12} spacing={3}></Grid>
-                    <Grid container item xs={12} spacing={3}></Grid>
+                <Grid container>
+                    {this.state.words.map((word: any, index: number) => {
+                        return <WordCard word={word} key={index}></WordCard>;
+                    })}
                 </Grid>
             </div>
         );
